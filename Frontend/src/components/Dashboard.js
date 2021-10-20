@@ -8,7 +8,7 @@ const Dashboard = ( user ) => {
             <Header />
             <DashboardNav />
             <JobListings />
-            <p>{
+            <p>Hello World!{
                 // Temp
                 JSON.stringify(user)
             }</p>
