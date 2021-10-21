@@ -5,6 +5,7 @@ import JobListings from './JobListings';
 const Dashboard = ( user ) => {
     return (
         <div>
+            Hi Hi Hi
             <Header />
             <DashboardNav />
             <JobListings />
