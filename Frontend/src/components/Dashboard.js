@@ -2,7 +2,7 @@ import './../styles/Dashboard.css';
 
 import Header from './Header';
 import DashboardNav from './DashboardNav';
-import JobLhttps://github.com/asalik13/job-listing-tool/pullsistings from './JobListings';
+import JobListings from './JobListings';
 import Footer from './Footer';
 
 const Dashboard = ({ user }) => {
