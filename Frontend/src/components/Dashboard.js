@@ -9,7 +9,7 @@ const Dashboard = ({ user }) => {
     return (
 
         <div className='dashboard'>
-            This is a totally different deploy<Header />
+            This is a totally different deploy
             <Header />
             <DashboardNav />
             <JobListings user={user}/>
