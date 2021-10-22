@@ -92,7 +92,7 @@ const Login = ({ setUser }) => {
         body: JSON.stringify(userInput)
       };
 
-      console.log('Sending request...');
+      console.log('Sending login request...');
       setLoading(true);
 
       fetch('/api/login', options)

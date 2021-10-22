@@ -1,0 +1,125 @@
+.job-listings-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 900px;
+    min-width: 450px;
+}
+
+.listings-filter {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 8px hsla(0, 100%, 0%, 0.2),
+        -3px -3px 10px hsla(0, 0%, 100%, 1);
+}
+#filter-icon {
+    margin-right: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.job-listings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes hover-scale {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.05;
+    }
+}
+.job-listing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0px;
+    padding: 10px 15px 15px 15px;
+    box-shadow: 5px 5px 8px hsla(0, 100%, 0%, 0.2),
+        -5px -5px 10px hsla(0, 0%, 100%, 1);
+}
+.job-listing-hover {
+    animation-duration: 200ms;
+    animation-name: hover-scale;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0px;
+    padding: 10px 15px 15px 15px;
+    box-shadow: 5px 5px 8px hsla(0, 100%, 0%, 0.2),
+        -5px -5px 10px hsla(0, 0%, 100%, 1);
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.listing-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-sal {
+    text-align: left;
+}
+#title {
+    margin-bottom: -5px;
+}
+#subtitle {
+    display: flex;
+    flex-direction: row;
+    color: grey;
+}
+#salary {
+    width: fit-content;
+}
+#st-break {
+    margin: 0px 10px;
+}
+
+#department {
+    color: gray;
+}
+
+.listing-desc {
+    text-align: left;
+    margin: 10px 5px 20px 5px;
+}
+
+.listing-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+}
+.tags li {
+    margin-right: 16px;
+    padding: 2px 8px;
+    font-size: small;
+    background-color: hsl(0, 0%, 85%);
+    border-radius: 8px;
+}
+.tags li:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 90%);
+}
+
+#date {
+    color: gray;
+    font-size: small;
+}

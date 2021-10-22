@@ -1,0 +1,36 @@
+.header {
+    height: 64px;
+    width: 100%;
+}
+
+/*Navbar CSS*/
+nav {
+    width: 100%;
+    display: flex;
+    background-color: rgb(0, 85, 81);
+    margin-bottom: 10px; 
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav div.nav-right {
+      position: absolute;
+      right: 0;
+  }
+  
+  nav a:hover {
+    background-color: #111;
+  }
