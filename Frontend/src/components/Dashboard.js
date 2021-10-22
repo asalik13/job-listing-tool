@@ -1,17 +1,17 @@
+import './../styles/Dashboard.css';
+
 import Header from './Header';
 import DashboardNav from './DashboardNav';
 import JobListings from './JobListings';
+import Footer from './Footer';
 
-const Dashboard = ( user ) => {
+const Dashboard = ({ user }) => {
     return (
-        <div>
+        <div className='dashboard'>
             <Header />
             <DashboardNav />
-            <JobListings />
-            <p>{
-                // Temp
-                JSON.stringify(user)
-            }</p>
+            <JobListings user={user}/>
+            <Footer />
         </div>
     )
 }

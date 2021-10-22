@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.dashboard-search {
+    align-items: center;
+}
+
+.dashboard-search input {
+    border-radius: 10px;
+}
