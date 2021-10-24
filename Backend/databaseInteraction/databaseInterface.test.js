@@ -1,5 +1,6 @@
 const doCredentialsMatch = require('./doCredentialsMatch');
 const getPositions = require('./getPositions');
+const getReferrals = require('./getReferrals');
 
 afterAll(() => {return new Promise(done => {
   // Closing the DB connection allows Jest to exit successfully.
@@ -48,6 +49,7 @@ describe('getPositions testing', () => {
   test('Valid Company', async () => {
     const res = await getPositions(ValidCompany);
     expect(res).toEqual(expect.any(Array));
+    expect(res.length).toBeTruthy();
     for(const entry of res){
       expect(entry).toEqual(
         expect.objectContaining({
@@ -66,6 +68,34 @@ describe('getPositions testing', () => {
       for(const tag of entry.tags){
         expect(tag).toEqual(expect.any(String));
       }
+    }
+  });
+});
+
+describe('getReferrals testing', () => {
+  const ValidListingId = 1;
+  const InvalidListingId = -1;
+
+  test('Invalid Listing Id', async () => {
+    expect(await getReferrals(InvalidListingId)).toEqual([]);
+  });
+
+  test('Valid Listing Id', async () => {
+    const res = await getReferrals(ValidListingId);
+    expect(res).toEqual(expect.any(Array));
+    expect(res.length).toBeTruthy();
+    for(const entry of res){
+      expect(entry).toEqual(
+        expect.objectContaining({
+          firstName:expect.any(String),
+          lastName:expect.any(String),
+          email:expect.any(String),
+          referralText:expect.any(String),
+          listingId:expect.any(Number),
+          authorId: expect.any(Number),
+          companyName: expect.any(String)
+        })
+      );
     }
   });
 });

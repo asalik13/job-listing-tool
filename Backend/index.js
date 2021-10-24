@@ -18,7 +18,8 @@ app.listen(port, () => {
 
 const endpoints = [
   require('./endpoints/loginPost'),
-  require('./endpoints/listingsPost')
+  require('./endpoints/listingsPost'),
+  require('./endpoints/referralsFromListingGet')
 ];
 
 for(const endpoint of endpoints){

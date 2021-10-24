@@ -18,7 +18,8 @@ const sequelize = new Sequelize(DATABASE_URI,{
 
 const modelDefiners = [
   require('./Models/Employee'),
-  require('./Models/Position')
+  require('./Models/Position'),
+  require('./Models/Referral'),
 ];
 
 for (const modelDefiner of modelDefiners) {
