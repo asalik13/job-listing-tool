@@ -61,6 +61,19 @@ describe('getPositions testing', () => {
           salary: expect.any(Number),
           managerId: expect.any(Number),
           tags: expect.any(Array),
+          manager: expect.objectContaining({
+            id: expect.any(Number),
+            firstName: expect.any(String),
+            lastName: expect.any(String),
+            employeeId: expect.any(Number),
+            companyId: expect.any(Number),
+            companyName: expect.any(String),
+            positionTitle: expect.any(String),
+            startDate: expect.any(String),
+            isManager: expect.any(Boolean),
+            createdAt: expect.any(Date),
+            updatedAt: expect.any(Date)
+          }),
           createdAt: expect.any(Date),
           updatedAt: expect.any(Date)
         })

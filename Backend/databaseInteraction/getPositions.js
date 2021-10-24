@@ -8,10 +8,13 @@ const {models} = require('../sequelizeSetup/sequalizeConstructor');
  */
 function getPositions(companyName) {
   return models.Position.findAll({
-    raw:true,
     where:{
       companyName:companyName
-    }
+    },
+    include: [{
+      model: models.Employee, 
+      as: 'manager', 
+    }],
   });
 }
 

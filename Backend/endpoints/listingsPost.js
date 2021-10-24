@@ -15,7 +15,10 @@ function listingsPost(app) {
       res.send({ Error: 'No company sent to look for listings' });
       return;
     }
-    res.send(await getPositions(company));
+    
+    positions = await getPositions(company)
+
+    res.send(JSON.parse(JSON.stringify(positions)));
   });
 }
 

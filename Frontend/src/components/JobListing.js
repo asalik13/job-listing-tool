@@ -51,8 +51,12 @@ const JobListing = ({ listingObj }) => {
             </div>
           </div>
           <div className='manager-dep'>
-            <p id='manager-name'>MANAGER_NAME</p>
-            <p id='department'>DEPARTMENT</p>
+            <p id='manager-name'>
+            {listingObj.manager.firstName + ' ' + listingObj.manager.lastName}
+            </p>
+            <p id='department'>
+              {listingObj.manager.positionTitle}
+            </p>
           </div>
         </div>
         <p className='listing-desc'>{listingObj.description}</p>
